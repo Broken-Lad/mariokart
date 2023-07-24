@@ -23,30 +23,30 @@ while ($record = mysqli_fetch_assoc($result)) {
         $traction = $record['Traction/Grip'];
         $miniTurbo = $record['Mini-Turbo'];
 
-        $extraDetailTr = "<th>Speed</th>
-                            <th>Acceleration</th>
-                            <th>Weight</th>
-                            <th>Handling</th>
-                            <th>Traction/Grip</th>
-                        <th>Mini-Turbo</th>";
+        $extraDetailTr = "<th bgcolor='DodgerBlue'>Speed</th>
+                            <th bgcolor='Gray'>Acceleration</th>
+                            <th bgcolor='MediumSeaGreen'>Weight</th>
+                            <th bgcolor='Orange'>Handling</th>
+                            <th bgcolor='Tomato'>Traction/Grip</th>
+                        <th bgcolor='SlateBlue'>Mini-Turbo</th>";
 
         $records .= "<tr>
                         <td>$counter</td>
                         <td>$name</td>
-                        <td><img src='$img' alt='$name' width='100'></td>
-                        <td>$speed</td>
-                        <td>$acceleration</td>
-                        <td>$weight</td>
-                        <td>$handling</td>
-                        <td>$traction</td>
-                        <td>$miniTurbo</td>
+                        <td><img src='$img' alt='$name' width='130'></td>
+                        <td bgcolor='DodgerBlue'>$speed</td>
+                        <td bgcolor='Gray'>$acceleration</td>
+                        <td bgcolor='MediumSeaGreen'>$weight</td>
+                        <td bgcolor='Orange'>$handling</td>
+                        <td bgcolor='Tomato'>$traction</td>
+                        <td bgcolor='SlateBlue'>$miniTurbo</td>
                     </tr>";
     } else {
         $extraDetailTr = "";
         $records .= "<tr>
                     <td>$counter</td>
                     <td>$name</td>
-                    <td><img src='$img' alt='$name' width='100'></td>
+                    <td><img src='$img' alt='$name' width='130'></td>
                 </tr>";
     }
 }
@@ -77,8 +77,8 @@ $conn->close();
 <body>
     <h2>Character List</h2>
     <?php
-        $buttonText = $showDetails ? "No More Detail" : "Extra Detail";
-        $toggleUrl = $showDetails ? "./index.php" : "./index.php?details=1";
+    $buttonText = $showDetails ? "No More Detail" : "Extra Detail";
+    $toggleUrl = $showDetails ? "./index.php" : "./index.php?details=1";
     ?>
 
     <a href="<?= $toggleUrl ?>"><button><?= $buttonText ?></button></a>
