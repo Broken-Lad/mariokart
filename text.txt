@@ -1,0 +1,96 @@
+INSERT INTO `vehicle` (`Id`, `Vehicle`, `Speed`, `Acceleration`, `Weight`, `Handling`, `Traction/Grip`, `Mini-Turbo`) VALUES 
+(NULL, 'Prancer', '0.25', '-0.5', '-0.25', '0', '-0.25', '-0.25'),
+(NULL, 'Biddybuggy', '-0.75', '0.75', '-0.5', '0.5', '0.5', '0.25'),
+(NULL, 'Landship', '-0.5', '0.5', '-0.5', '-0.5', '0.75', '0.5'),
+(NULL, 'Sneeker', '0.25', '-0.5', '0', '0', '-0.75', '-0.25'),
+(NULL, 'Sports Coupe', '0', '-0.25', '0.25', '-0.25', '0.25', '0')
+//////////////////////////////////////////////////////////////////////
+
+INSERT INTO `character-stats` (`Id`, `Name`, `WeightClassId`) VALUES 
+(NULL, 'Baby Mario', '3'),
+(NULL, 'Baby Luigi', '3'),
+(NULL, 'Dry Bones', '3'),
+
+(NULL, 'Koopa Troopa', '4'),
+(NULL, 'Lakitu', '4'),
+(NULL, 'Bowser Jr', '4'),
+
+(NULL, 'Toadette', '5'),
+(NULL, 'Wendy', '5'),
+(NULL, 'Isabelle', '5'),
+
+(NULL, 'Toad', '6'),
+(NULL, 'ShyGuy', '6'),
+(NULL, 'Larry', '6'),
+
+(NULL, 'Cat Peach', '7'),
+(NULL, 'Inkling Girl', '7'),
+(NULL, 'Villager Girl', '7'),
+
+(NULL, 'Peach', '8'),
+(NULL, 'Yoshi', '8'),
+(NULL, 'Birdo', '8'),
+
+(NULL, 'Tanooki Mario', '9'),
+(NULL, 'Inkling Boy', '9'),
+(NULL, 'Villager Boy', '9'),
+
+(NULL, 'Luigi', '10'),
+(NULL, 'Iggy', '10'),
+(NULL, 'Kamek', '10'),
+
+(NULL, 'Mario', '11'),
+(NULL, 'Ludwig', '11'),
+
+(NULL, 'Link', '12'),
+(NULL, 'King Boo', '12'),
+(NULL, 'Rosalina', '12'),
+
+(NULL, 'Metal/Gold Mario', '13'),
+(NULL, 'Pink Gold Peach', '13'),
+(NULL, 'Petey Piranha', '13'),
+
+(NULL, 'Donkey Kong', '14'),
+(NULL, 'Roy', '14'),
+(NULL, 'Waluigi', '14'),
+(NULL, 'Wiggler', '14'),
+
+(NULL, 'Wario', '15'),
+(NULL, 'Dry Bowser', '15'),
+
+(NULL, 'Bowser', '16'),
+(NULL, 'Morton', '16')
+;
+
+
+///////////////////////////////
+UPDATE `character-stats` SET `characterImg` = '15' WHERE `character-stats`.`Id` = 15;
+UPDATE `character-stats` SET `characterImg` = '16' WHERE `character-stats`.`Id` = 16;
+UPDATE `character-stats` SET `characterImg` = '17' WHERE `character-stats`.`Id` = 17;
+UPDATE `character-stats` SET `characterImg` = '18' WHERE `character-stats`.`Id` = 18;
+UPDATE `character-stats` SET `characterImg` = '19' WHERE `character-stats`.`Id` = 19;
+UPDATE `character-stats` SET `characterImg` = '20' WHERE `character-stats`.`Id` = 20;
+UPDATE `character-stats` SET `characterImg` = '21' WHERE `character-stats`.`Id` = 21;
+UPDATE `character-stats` SET `characterImg` = '22' WHERE `character-stats`.`Id` = 22;
+UPDATE `character-stats` SET `characterImg` = '23' WHERE `character-stats`.`Id` = 23;
+UPDATE `character-stats` SET `characterImg` = '24' WHERE `character-stats`.`Id` = 24;
+UPDATE `character-stats` SET `characterImg` = '25' WHERE `character-stats`.`Id` = 25;
+UPDATE `character-stats` SET `characterImg` = '26' WHERE `character-stats`.`Id` = 26;
+UPDATE `character-stats` SET `characterImg` = '27' WHERE `character-stats`.`Id` = 27;
+UPDATE `character-stats` SET `characterImg` = '28' WHERE `character-stats`.`Id` = 28;
+UPDATE `character-stats` SET `characterImg` = '29' WHERE `character-stats`.`Id` = 29;
+UPDATE `character-stats` SET `characterImg` = '30' WHERE `character-stats`.`Id` = 30;
+UPDATE `character-stats` SET `characterImg` = '31' WHERE `character-stats`.`Id` = 31;
+UPDATE `character-stats` SET `characterImg` = '32' WHERE `character-stats`.`Id` = 32;
+UPDATE `character-stats` SET `characterImg` = '33' WHERE `character-stats`.`Id` = 33;
+UPDATE `character-stats` SET `characterImg` = '34' WHERE `character-stats`.`Id` = 34;
+UPDATE `character-stats` SET `characterImg` = '36' WHERE `character-stats`.`Id` = 36;
+UPDATE `character-stats` SET `characterImg` = '35' WHERE `character-stats`.`Id` = 35;
+UPDATE `character-stats` SET `characterImg` = '37' WHERE `character-stats`.`Id` = 37;
+UPDATE `character-stats` SET `characterImg` = '38' WHERE `character-stats`.`Id` = 38;
+UPDATE `character-stats` SET `characterImg` = '39' WHERE `character-stats`.`Id` = 39;
+UPDATE `character-stats` SET `characterImg` = '40' WHERE `character-stats`.`Id` = 40;
+UPDATE `character-stats` SET `characterImg` = '41' WHERE `character-stats`.`Id` = 41;
+UPDATE `character-stats` SET `characterImg` = '42' WHERE `character-stats`.`Id` = 42;
+UPDATE `character-stats` SET `characterImg` = '43' WHERE `character-stats`.`Id` = 43;
+UPDATE `character-stats` SET `characterImg` = '44' WHERE `character-stats`.`Id` = 44;
