@@ -1,6 +1,7 @@
 <?php
 include_once("./functions/dbConnect.php");
 
+$showDetails = isset($_GET["details"]);
 $sql = "SELECT * FROM `character-stats` LEFT JOIN weightclass ON `character-stats`.WeightClassId = weightclass.Id";
 $result = $conn->query($sql);
 
@@ -12,26 +13,42 @@ while ($record = mysqli_fetch_assoc($result)) {
     $counter++;
     $characterImg = $record['characterImg'];
     $name = $record['Name'];
-    $speed = $record['Speed'];
-    $acceleration = $record['Acceleration'];
-    $weight = $record['Weight'];
-    $handling = $record['Handling'];
-    $traction = $record['Traction/Grip'];
-    $miniTurbo = $record['Mini-Turbo'];
-
     $img = "./media/img/character-portraits/$characterImg";
 
-    $records .= "<tr>
+    if ($showDetails == TRUE) {
+        $speed = $record['Speed'];
+        $acceleration = $record['Acceleration'];
+        $weight = $record['Weight'];
+        $handling = $record['Handling'];
+        $traction = $record['Traction/Grip'];
+        $miniTurbo = $record['Mini-Turbo'];
+
+        $extraDetailTr = "<th>Speed</th>
+                            <th>Acceleration</th>
+                            <th>Weight</th>
+                            <th>Handling</th>
+                            <th>Traction/Grip</th>
+                        <th>Mini-Turbo</th>";
+
+        $records .= "<tr>
+                        <td>$counter</td>
+                        <td>$name</td>
+                        <td><img src='$img' alt='$name' width='100'></td>
+                        <td>$speed</td>
+                        <td>$acceleration</td>
+                        <td>$weight</td>
+                        <td>$handling</td>
+                        <td>$traction</td>
+                        <td>$miniTurbo</td>
+                    </tr>";
+    } else {
+        $extraDetailTr = "";
+        $records .= "<tr>
                     <td>$counter</td>
                     <td>$name</td>
                     <td><img src='$img' alt='$name' width='100'></td>
-                    <td>$speed</td>
-                    <td>$acceleration</td>
-                    <td>$weight</td>
-                    <td>$handling</td>
-                    <td>$traction</td>
-                    <td>$miniTurbo</td>
                 </tr>";
+    }
 }
 
 $conn->close();
@@ -59,17 +76,19 @@ $conn->close();
 
 <body>
     <h2>Character List</h2>
+    <?php
+        $buttonText = $showDetails ? "No More Detail" : "Extra Detail";
+        $toggleUrl = $showDetails ? "./index.php" : "./index.php?details=1";
+    ?>
+
+    <a href="<?= $toggleUrl ?>"><button><?= $buttonText ?></button></a>
+
     <table>
         <tr>
             <th>ID</th>
             <th>Name</th>
             <th>Picture</th>
-            <th>Speed</th>
-            <th>Acceleration</th>
-            <th>Weight</th>
-            <th>Handling</th>
-            <th>Traction/Grip</th>
-            <th>Mini-Turbo</th>
+            <?= $extraDetailTr ?>
         </tr>
         <?= $records ?>
     </table>
